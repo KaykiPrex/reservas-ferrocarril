@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="datos.Butaca" table="butaca">
+<id column="idButaca" name="idButaca">
+<generator class="identity"/>
+</id>
+<property column="butaca" name="butaca" type="string"/>
+<set name="pasajes" table="pasaje" inverse="true" lazy="true" fetch="select">
+<key>
+<column name="idPasaje" not-null="true" />
+</key>
+<one-to-many class="datos.Pasaje" />
+</set>
+<many-to-one name="vagon" class="datos.Vagon"
+column="idVagon" not-null="true"/>
+</class>
+</hibernate-mapping>

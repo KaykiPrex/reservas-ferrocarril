@@ -1,0 +1,51 @@
+@CHARSET "ISO-8859-1";
+
+
+
+.subtitulo{
+	width:1024px;
+	height:200px;
+	
+	
+}
+
+.imagen{
+	float:left;
+}
+
+.contenedor-imagen{
+	width:150px;
+	height:150px;
+	  float:left;
+  margin-top:50px;
+   margin: 10px;
+   padding:5px;
+   
+   text-align:left;
+   
+   font-variant: small-caps;
+        font-style: italic;
+        font-weight:bold;
+        color:#457cfc;
+        
+        letter-spacing: 1px;
+        
+    webkit-transition:all 2500ms ease;
+	-o-transition:all 2500ms ease;
+	transition:all 2500ms ease;
+	
+}
+.imglinea:hover{
+	background-size:104%;
+	
+}
+.imglinea{
+	
+	background-image: url("../img/TrenGo.png" );
+	width:100px;
+	height:100px;
+	background-size:85%;
+	background-repeat: no-repeat;
+	
+}
+

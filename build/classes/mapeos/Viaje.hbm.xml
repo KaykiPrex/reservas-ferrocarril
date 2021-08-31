@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="datos.Viaje" table="viaje">
+<id column="idViaje" name="idViaje">
+<generator class="identity"/>
+</id>
+<property column="fechaHora" name="fechaHora" type="calendar"/>
+<property column="cantidadPasajesLibres" name="cantidadPasajesLibres" type="int"/>
+<property column="cantidadVagones" name="cantidadVagones" type="int"/>
+<property column="TerminalSalida" name="TerminalSalida" type="string"/>
+<property column="TerminalLlegada" name="TerminalLlegada" type="string"/>
+<set name="pasajes" table="pasaje" inverse="true" lazy="false" fetch="select">
+<key>
+<column name="idPasaje" not-null="true" />
+</key>
+<one-to-many class="datos.Pasaje" />
+</set>
+<set table="vagonxviaje" name="vagones" outer-join="true">
+<key column="idViaje"/>
+<many-to-many column="idVagon" class="datos.Vagon"/>
+</set>
+</class>
+</hibernate-mapping>

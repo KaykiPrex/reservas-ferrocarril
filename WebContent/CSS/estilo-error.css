@@ -1,0 +1,46 @@
+@CHARSET "ISO-8859-1";
+
+.contenedor-error{
+	
+   float:left;
+   width:1024px;
+   height:400px;
+   
+   
+   text-align:justify;
+   
+   	
+	
+	font-variant: small-caps;
+    font-style: italic;
+    font-weight:bold;
+   
+    left:500px;    
+    letter-spacing: 1px;
+   	
+ 
+   		
+}
+
+.oops{
+	
+	width:600px;
+	height:400px;
+	vertical-align: middle;
+}
+
+.texto-contacto{
+	float:right;
+	width:424px ;
+	height: 600px;
+	
+	text-align:center;
+	line-height: 80px
+	
+	
+	
+}
+.pie-de-pagina{
+	height:100px;
+	
+}

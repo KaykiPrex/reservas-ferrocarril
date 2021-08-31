@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="datos.Login" table="login" >
+<id name="idUsuario" column="idUsuario">
+<generator class="foreign">
+<param name="property">usuario</param>
+</generator>
+</id>
+<property name="login"  column="login" type="int" />
+<property name="clave"  column="clave" type="int" />
+<property name="privilegio"  column="privilegio" type="int" />
+<property name="ultimoLogin"  column="ultimoLogin" type="calendar" />
+<property name="ultimoCambioClave"  column="ultimoCambioClave" type="calendar" />
+<one-to-one name="usuario" class="datos.Usuario" ></one-to-one>
+</class>
+</hibernate-mapping>

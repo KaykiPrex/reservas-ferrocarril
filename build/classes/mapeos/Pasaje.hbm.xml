@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="datos.Pasaje" table="pasaje">
+<id column="idPasaje" name="idPasaje">
+<generator class="identity"/>
+</id>
+<property column="ocupado" name="ocupado" type="boolean"/>
+<many-to-one name="usuario" class="datos.Usuario"
+column="idUsuario" not-null="true"/>
+<many-to-one name="butaca" class="datos.Butaca"
+column="idButaca" not-null="true"/>
+<many-to-one name="viaje" class="datos.Viaje"
+column="idViaje" not-null="true"/>
+</class>
+</hibernate-mapping>
